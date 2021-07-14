@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-func AverageArray(a [6]float32) float32 {
+func averageArray(a [6]float32) float32 {
 	var c float32
 	var k float32
 	k = 0
@@ -15,7 +15,7 @@ func AverageArray(a [6]float32) float32 {
 	}
 	return c / k
 }
-func Max(a []string) string {
+func max(a []string) string {
 	var longestWord string
 	longestLength := 0
 	for _, word := range a {
@@ -28,13 +28,13 @@ func Max(a []string) string {
 	}
 	return longestWord
 }
-func Reverse(a []int64) []int64 {
+func reverse(a []int64) []int64 {
 	for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
 		a[i], a[j] = a[j], a[i]
 	}
 	return a
 }
-func PrintSorted(a map[int]string) {
+func printSorted(a map[int]string) {
 	b := map[int]string{}
 	key := []int{}
 
@@ -49,14 +49,14 @@ func PrintSorted(a map[int]string) {
 }
 func main() {
 	a := [6]float32{1, 2, 3, 4, 5, 6}
-	fmt.Println(AverageArray(a))
+	fmt.Println(averageArray(a))
 
 	d := []string{"one", "two"}
-	fmt.Println(Max(d))
+	fmt.Println(max(d))
 
 	b := []int64{1, 2, 5, 15}
-	fmt.Println(Reverse(b))
+	fmt.Println(reverse(b))
 
 	c := map[int]string{4: "aa", 3: "dd", 1: "dad"}
-	PrintSorted(c)
+	printSorted(c)
 }
