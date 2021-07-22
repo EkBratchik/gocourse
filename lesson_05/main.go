@@ -50,11 +50,17 @@ func (s Rectangle) Perimetr() (float64, error){
 func DescribeShape(s Shape){
 	fmt.Println(s)
 	res,err := s.Area()
-	fmt.Printf("Area: %.2f ",res)
-	fmt.Println(err)
+	if err != nil{
+		fmt.Println(err)
+	}else{
+		fmt.Printf("Area: %.2f\n", res)
+	}
 	res,err = s.Perimetr()
-	fmt.Printf("Perimetr: %.2f ", res)
-	fmt.Println(err)
+	if err != nil{
+		fmt.Println(err)
+	}else{
+		fmt.Printf("Perimetr: %.2f\n", res)
+	}
 }
 func main(){
 	c:=Circle{radius: 8}
