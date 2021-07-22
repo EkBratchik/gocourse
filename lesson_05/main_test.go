@@ -13,15 +13,15 @@ func TestCircle_Area(t *testing.T) {
 		wantErr bool
 	}{
 		{
-			name: "return error if negative or null value",
-			fields: fields{radius: 0},
-			want: 0,
+			name:    "return error if negative or null value",
+			fields:  fields{radius: 0},
+			want:    0,
 			wantErr: true,
 		},
 		{
-			name: "return area of circle",
-			fields: fields{radius: 8},
-			want: 201.06192982974676,
+			name:    "return area of circle",
+			fields:  fields{radius: 8},
+			want:    201.06192982974676,
 			wantErr: false,
 		},
 	}
@@ -53,19 +53,19 @@ func TestCircle_Perimetr(t *testing.T) {
 		wantErr bool
 	}{
 		{
-			name: "return error if negative or null value",
-			fields: fields{radius: 0},
-			want: 0,
+			name:    "return error if negative or null value",
+			fields:  fields{radius: 0},
+			want:    0,
 			wantErr: true,
 		},
 		{
-			name: "return perimetr of circle",
-			fields: fields{radius: 8},
-			want: 50.26548245743669,
+			name:    "return perimetr of circle",
+			fields:  fields{radius: 8},
+			want:    50.26548245743669,
 			wantErr: false,
 		},
 	}
-		for _, tt := range tests {
+	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			s := Circle{
 				radius: tt.fields.radius,
@@ -94,15 +94,15 @@ func TestRectangle_Area(t *testing.T) {
 		wantErr bool
 	}{
 		{
-			name: "error if negative or null values",
-			fields: fields{height: -1, width: -1},
-			want: 0,
+			name:    "error if negative or null values",
+			fields:  fields{height: -1, width: -1},
+			want:    0,
 			wantErr: true,
 		},
 		{
-			name: "area of rectangle",
-			fields: fields{height: 9, width: 3},
-			want: 27,
+			name:    "area of rectangle",
+			fields:  fields{height: 9, width: 3},
+			want:    27,
 			wantErr: false,
 		},
 	}
@@ -136,15 +136,15 @@ func TestRectangle_Perimetr(t *testing.T) {
 		wantErr bool
 	}{
 		{
-			name: "error if negative or null values",
-			fields: fields{height: -1, width: -1},
-			want: 0,
+			name:    "error if negative or null values",
+			fields:  fields{height: -1, width: -1},
+			want:    0,
 			wantErr: true,
 		},
 		{
-			name: "perimetr of rectangle",
-			fields: fields{height: 9, width: 3},
-			want: 24,
+			name:    "perimetr of rectangle",
+			fields:  fields{height: 9, width: 3},
+			want:    24,
 			wantErr: false,
 		},
 	}
@@ -165,4 +165,3 @@ func TestRectangle_Perimetr(t *testing.T) {
 		})
 	}
 }
-
